@@ -4,7 +4,11 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 23
+<<<<<<< HEAD
   productGUID: d331acb6a21ecc24f90d69ab87ae9d62
+=======
+  productGUID: 0a9504c7fd996ea478cb5cb8d8a8b602
+>>>>>>> b6db076fad6c2066b234fff45987122be159a22a
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
@@ -13,7 +17,11 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: DefaultCompany
+<<<<<<< HEAD
   productName: EQE
+=======
+  productName: Final - Isometric 2D
+>>>>>>> b6db076fad6c2066b234fff45987122be159a22a
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -656,7 +664,11 @@ PlayerSettings:
     m_VersionCode: 1
     m_VersionName: 
   apiCompatibilityLevel: 6
+<<<<<<< HEAD
   activeInputHandler: 0
+=======
+  activeInputHandler: 2
+>>>>>>> b6db076fad6c2066b234fff45987122be159a22a
   cloudProjectId: 
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []

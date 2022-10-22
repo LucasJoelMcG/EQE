@@ -41,3 +41,18 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+<<<<<<< HEAD
+=======
+  - name: Ground
+    uniqueID: 3682259675
+    locked: 0
+  - name: Block
+    uniqueID: 1214325027
+    locked: 0
+  - name: Road-Fence-Building
+    uniqueID: 3032342721
+    locked: 0
+  - name: Char
+    uniqueID: 3591703141
+    locked: 0
+>>>>>>> b6db076fad6c2066b234fff45987122be159a22a
