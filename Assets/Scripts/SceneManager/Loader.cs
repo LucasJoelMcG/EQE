@@ -12,7 +12,8 @@ public static class Loader
         Level3,
         LevelResult,
         MapScene,
-        LoadingScene
+        LoadingScene,
+        SettingsScene
     }
 
     private static Action onLoaderCallback;

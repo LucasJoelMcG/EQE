@@ -7,4 +7,15 @@ public class MainMenu : MonoBehaviour
     {
         Loader.Load(Loader.Scene.MapScene);
     }
+
+    public void LoadSettings()
+    {
+        Loader.Load(Loader.Scene.SettingsScene);
+    }
+
+    public void ExitGame()
+    {
+        UnityEditor.EditorApplication.isPlaying = false; // Para cerrar el editor de unity
+        Application.Quit(); // Para cerrar el juego ya exportado
+    }
 }
