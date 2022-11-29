@@ -13,11 +13,14 @@ public class Health : MonoBehaviour
     private PlayerAnimation _anim;
     public int readHealth;        //Variable de lectura para Health
     public int readMaxHealth;     //Variable de lectura para _maxHealth
+    public GameObject _lowHealth;
+    private bool canAppear = true;
 
     private void Awake()
     {
         _anim = GetComponent<PlayerAnimation>();
         playerMovement = GetComponent<PlayerMovement>();
+        
     }
     private void Start()
     {
@@ -33,6 +36,13 @@ public class Health : MonoBehaviour
         {
             healthBarUI.SetActive(true);
         }
+
+        if (health < 20)
+        {
+            LowHealth();
+            //_lowHealth.SetActive(true);
+        }
+        
     }
     int CalculateHealth()
     {
@@ -79,6 +89,7 @@ public class Health : MonoBehaviour
             this.health += amount;
         }
         Debug.Log("Health: " + health);
+
     }
 
     private void Die()
@@ -90,6 +101,21 @@ public class Health : MonoBehaviour
 
     }
 
-
+    private void LowHealth()
+    {
+        if (canAppear)
+        {
+            StartCoroutine(LowHealthAnimation());
+        }
+    }
+    private IEnumerator LowHealthAnimation()
+    {
+        _lowHealth.SetActive(true);
+        canAppear = false;
+        yield return new WaitForSeconds(0.5f);
+        _lowHealth.SetActive(false);
+        yield return new WaitForSeconds(0.5f);
+        canAppear = true;
+    }
 
 }

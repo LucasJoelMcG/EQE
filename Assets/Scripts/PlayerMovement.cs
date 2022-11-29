@@ -20,6 +20,7 @@ public class PlayerMovement : MonoBehaviour
     private float timer = 0f;
     private CapsuleCollider2D _capsuleCollider;
     public Vector2 readMoveDirection;
+    
 
     [SerializeField] private GameObject rangedSlash;
     [SerializeField] private Transform shotPoint;
@@ -81,18 +82,20 @@ public class PlayerMovement : MonoBehaviour
         if ( _moveDirection.x < 0f)
         {
             _spriteRenderer.flipX = false;
-           // rangedSlash.transform.localScale = new Vector2(1f, 1f);
+           rangedSlash.transform.localScale = new Vector2(1f, 1f);
             shotPoint.transform.localScale = new Vector2(1f, 1f);
             _attackArea.transform.localScale = new Vector2(-1f, 1f);
-            _attack1.transform.localPosition = new Vector2(-1f, 0f);
+            _attack1.transform.localScale = new Vector2(-0.8f, 0.8f);
+            _attack1.transform.localPosition = new Vector2(-0.5f, 0f);
         }
         if (_moveDirection.x > 0f)
         {
             _spriteRenderer.flipX = true;
-           // rangedSlash.transform.localScale = new Vector2(-1f, 1f);
+           rangedSlash.transform.localScale = new Vector2(-1f, 1f);
             shotPoint.transform.localScale = new Vector2(-1f, 1f);
-            _attackArea.transform.localScale = new Vector2(1f, 1f);
-            _attack1.transform.localPosition = new Vector2(1f, 0f);
+           _attackArea.transform.localScale = new Vector2(1f, 1f);
+            _attack1.transform.localScale = new Vector2(0.8f, 0.8f);
+            _attack1.transform.localPosition = new Vector2(0.5f, 0f);
         }
 
     }
@@ -104,6 +107,7 @@ public class PlayerMovement : MonoBehaviour
         _attackArea.SetActive(attacking);
         _attack1.SetActive(attacking);
         _audioSword.Play();
+        return;
     }
 
     private void RangedAttack(InputAction.CallbackContext context)
@@ -182,7 +186,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-       if (isDashing)
+       
+        if (isDashing)
         {
             return;
         }
