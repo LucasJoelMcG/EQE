@@ -12,7 +12,7 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 _moveDirection = Vector2.zero; //Atajo de (X:0;Y:0)
     private PlayerInputsAction playerControls;
     private PlayerAnimation _anim;
-    private AudioSource _audioSword;
+    
     private GameObject _attackArea = default;
     private GameObject _attack1 = default;
     private bool attacking = false;
@@ -35,6 +35,11 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float dashingCooldown = 1f;
     [SerializeField] private TrailRenderer _trailRenderer;
 
+    //Audios
+    [SerializeField] private AudioSource _audioSword;
+    [SerializeField] private AudioSource _rangedAudio;
+    [SerializeField] private AudioSource _walkAudio;
+    [SerializeField] private AudioSource _dashAudio;
     private void Awake()
     {
         _rb = GetComponent<Rigidbody2D>();
@@ -44,7 +49,7 @@ public class PlayerMovement : MonoBehaviour
         _anim = GetComponent<PlayerAnimation>();
         _attackArea = transform.GetChild(0).gameObject;
         _attack1 = transform.GetChild(1).gameObject;
-        _audioSword = GetComponentInChildren<AudioSource>();
+        //_audioSword = GetComponentInChildren<AudioSource>();
     }
 
     private void OnEnable()
@@ -121,6 +126,7 @@ public class PlayerMovement : MonoBehaviour
     private IEnumerator RangedAttack()
     {
         _anim.Attack();
+        _rangedAudio.Play();
         Instantiate(rangedSlash, shotPoint.position, rangedSlash.transform.rotation);
         canRangedAttack = false;
         //isRangedAttacking = true;
@@ -140,11 +146,14 @@ public class PlayerMovement : MonoBehaviour
         canDash = false;
         isDashing = true;
         _rb.velocity = new Vector2(_moveDirection.x * dashinPower,0f);
-        _capsuleCollider.enabled = false;
+        _dashAudio.Play();
+        //_capsuleCollider.enabled = false;
+        Physics2D.IgnoreLayerCollision(6, 7,true);
         _trailRenderer.emitting = true;
         yield return new WaitForSeconds(dashingTime);
         _trailRenderer.emitting = false;
-        _capsuleCollider.enabled = true;
+        //_capsuleCollider.enabled = true;
+        Physics2D.IgnoreLayerCollision(6, 7, false);
         isDashing = false;
         yield return new WaitForSeconds(dashingCooldown);
         canDash = true;
@@ -162,6 +171,7 @@ public class PlayerMovement : MonoBehaviour
         if (_moveDirection != Vector2.zero)
         {
             Move();
+            _walkAudio.Play();
         }
 
         _anim.Move(_moveDirection);

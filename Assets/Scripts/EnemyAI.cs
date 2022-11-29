@@ -66,13 +66,13 @@ public class EnemyAI : MonoBehaviour
     {
         if (player.transform.position.x < transform.position.x)
         {
-            _spriteRenderer.flipX = false;
+            _spriteRenderer.flipX = true;
             _attackArea.transform.localScale = new Vector2(-1f, 1f);
             _attack1.transform.localPosition = new Vector2(-1f, 0f);
         }
         if (player.transform.position.x > transform.position.x)
         {
-            _spriteRenderer.flipX = true;
+            _spriteRenderer.flipX = false;
             _attackArea.transform.localScale = new Vector2(1f, 1f);
             _attack1.transform.localPosition = new Vector2(1f, 0f);
         }
@@ -85,7 +85,7 @@ public class EnemyAI : MonoBehaviour
         _attackArea.SetActive(true);
         _attack1.SetActive(true);
         _audioSword.Play();
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(1.2f);
         _attackArea.SetActive(false);
         _attack1.SetActive(false);
         yield return new WaitForSeconds(0.1f);

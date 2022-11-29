@@ -9,8 +9,8 @@ public class TutoUI : MonoBehaviour
     [SerializeField] private GameObject panelAttack2;
     [SerializeField] private GameObject panelEliminateEnemies;
     [SerializeField] private GameObject panelHealPotion;
-    [SerializeField] private GameObject triggerDamage;
-    [SerializeField] private GameObject potionHealth;
+    [SerializeField] private GameObject player;
+    private bool damaged;
     void Awake()
     {
         panelMovement.SetActive(true);
@@ -18,18 +18,15 @@ public class TutoUI : MonoBehaviour
         panelAttack2.SetActive(false);
         panelEliminateEnemies.SetActive(false);
         panelHealPotion.SetActive(false);
-        triggerDamage = GameObject.Find("TriggerDamage");
-        triggerDamage.SetActive(false);
-        potionHealth.SetActive(false);
-
-
+        player = GameObject.Find("Player");
+        damaged = false;
      }
     void Update()
     {
-        
+
         GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
         GameObject[] potions = GameObject.FindGameObjectsWithTag("Potion");
-        Debug.Log(potions.Length);
+      
         if (enemies.Length == 3)
         {
             panelAttack1.SetActive(false);
@@ -41,24 +38,20 @@ public class TutoUI : MonoBehaviour
             panelEliminateEnemies.SetActive(true);
 
         }
-        
-        if (enemies.Length == 1) { 
-        //panelEliminateEnemies.SetActive(false);
-       // panelHealPotion.SetActive(true);
-
+        if (enemies.Length == 1 && !damaged)
+        {
+            player.GetComponent<Health>().Damage(50);
+            damaged=true;   
         }
-
-        if (enemies.Length == 0 )
+        if (enemies.Length == 0)
         {
             panelEliminateEnemies.SetActive(false);
-            panelHealPotion.SetActive(true);
-            triggerDamage.SetActive(true);
-            potionHealth.SetActive(true);
+            panelHealPotion.SetActive(true);   
+
         }
-        if (potions.Length == 0 )
+        if (potions.Length == 0)
         {
             panelHealPotion.SetActive(false);
-            
         }
     }
 }

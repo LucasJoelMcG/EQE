@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BeatToDisable : MonoBehaviour
 {
-     void Awake()
+    void Awake()
     {
         GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
         if (enemies.Length == 0)

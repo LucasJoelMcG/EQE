@@ -15,6 +15,7 @@ public class Health : MonoBehaviour
     public int readMaxHealth;     //Variable de lectura para _maxHealth
     public GameObject _lowHealth;
     private bool canAppear = true;
+    [SerializeField] private AudioSource _hitAudio;
 
     private void Awake()
     {
@@ -40,7 +41,6 @@ public class Health : MonoBehaviour
         if (health < 20)
         {
             LowHealth();
-            //_lowHealth.SetActive(true);
         }
         
     }
@@ -59,6 +59,7 @@ public class Health : MonoBehaviour
       if (health > 1)
         {
             _anim.Hit();
+            _hitAudio.Play();
         }
         
         Debug.Log("Health: " + health);
