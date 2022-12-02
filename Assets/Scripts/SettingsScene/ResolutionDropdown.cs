@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class FullscreenToggle : MonoBehaviour
+public class ResolutionDropdown : MonoBehaviour
 {
     public Toggle toggle;
     public TMP_Dropdown resolutionDropdown;
@@ -22,6 +22,12 @@ public class FullscreenToggle : MonoBehaviour
         }
 
         GetResolution();
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
     }
 
     public void EnableFullscreen(bool fullscreen)
@@ -50,13 +56,10 @@ public class FullscreenToggle : MonoBehaviour
         resolutionDropdown.AddOptions(options);
         resolutionDropdown.value = currentResolution;
         resolutionDropdown.RefreshShownValue();
-
-        resolutionDropdown.value = PlayerPrefs.GetInt("resolutionNumber", 0);
     }
 
     public void ChangeResolution(int resolutionIndex)
     {
-        PlayerPrefs.SetInt("resolutionNumber", resolutionDropdown.value);
         Resolution res = resolution[resolutionIndex];
         Screen.SetResolution(res.width, res.height, Screen.fullScreen);
     }
