@@ -15,7 +15,7 @@ public class MainMenu : MonoBehaviour
 
     public void ExitGame()
     {
-        UnityEditor.EditorApplication.isPlaying = false; // Para cerrar el editor de unity
+        //UnityEditor.EditorApplication.isPlaying = false; // Para cerrar el editor de unity
         Application.Quit(); // Para cerrar el juego ya exportado
     }
 }
