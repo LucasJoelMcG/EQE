@@ -12,7 +12,7 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 _moveDirection = Vector2.zero; //Atajo de (X:0;Y:0)
     private PlayerInputsAction playerControls;
     private PlayerAnimation _anim;
-    
+
     private GameObject _attackArea = default;
     private GameObject _attack1 = default;
     private bool attacking = false;
@@ -20,7 +20,7 @@ public class PlayerMovement : MonoBehaviour
     private float timer = 0f;
     private CapsuleCollider2D _capsuleCollider;
     public Vector2 readMoveDirection;
-    
+
 
     [SerializeField] private GameObject rangedSlash;
     [SerializeField] private Transform shotPoint;
@@ -40,6 +40,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private AudioSource _rangedAudio;
     [SerializeField] private AudioSource _walkAudio;
     [SerializeField] private AudioSource _dashAudio;
+
+    private bool _isPlayingWalking = false;
     private void Awake()
     {
         _rb = GetComponent<Rigidbody2D>();
@@ -75,19 +77,20 @@ public class PlayerMovement : MonoBehaviour
 
     private void Move()
     {
-     
-        if (_moveDirection.x != 0f )
+
+        if (_moveDirection.x != 0f)
         {
             Flip();
+
         }
     }
 
     private void Flip()
     {
-        if ( _moveDirection.x < 0f)
+        if (_moveDirection.x < 0f)
         {
             _spriteRenderer.flipX = false;
-           rangedSlash.transform.localScale = new Vector2(1f, 1f);
+            rangedSlash.transform.localScale = new Vector2(1f, 1f);
             shotPoint.transform.localScale = new Vector2(1f, 1f);
             _attackArea.transform.localScale = new Vector2(-1f, 1f);
             _attack1.transform.localScale = new Vector2(-0.8f, 0.8f);
@@ -96,9 +99,9 @@ public class PlayerMovement : MonoBehaviour
         if (_moveDirection.x > 0f)
         {
             _spriteRenderer.flipX = true;
-           rangedSlash.transform.localScale = new Vector2(-1f, 1f);
+            rangedSlash.transform.localScale = new Vector2(-1f, 1f);
             shotPoint.transform.localScale = new Vector2(-1f, 1f);
-           _attackArea.transform.localScale = new Vector2(1f, 1f);
+            _attackArea.transform.localScale = new Vector2(1f, 1f);
             _attack1.transform.localScale = new Vector2(0.8f, 0.8f);
             _attack1.transform.localPosition = new Vector2(0.5f, 0f);
         }
@@ -145,10 +148,10 @@ public class PlayerMovement : MonoBehaviour
     {
         canDash = false;
         isDashing = true;
-        _rb.velocity = new Vector2(_moveDirection.x * dashinPower,0f);
+        _rb.velocity = new Vector2(_moveDirection.x * dashinPower, 0f);
         _dashAudio.Play();
         //_capsuleCollider.enabled = false;
-        Physics2D.IgnoreLayerCollision(6, 7,true);
+        Physics2D.IgnoreLayerCollision(6, 7, true);
         _trailRenderer.emitting = true;
         yield return new WaitForSeconds(dashingTime);
         _trailRenderer.emitting = false;
@@ -157,8 +160,8 @@ public class PlayerMovement : MonoBehaviour
         isDashing = false;
         yield return new WaitForSeconds(dashingCooldown);
         canDash = true;
-    } 
-    
+    }
+
     private void FixedUpdate()
     {
         if (isDashing)
@@ -168,21 +171,30 @@ public class PlayerMovement : MonoBehaviour
 
         _rb.velocity = new Vector2(_moveDirection.x * moveSpeed, _moveDirection.y * moveSpeed);
         _moveDirection = playerControls.Player.Move.ReadValue<Vector2>();
+        _anim.Move(_moveDirection);
         if (_moveDirection != Vector2.zero)
         {
             Move();
-            _walkAudio.Play();
+            if (!_isPlayingWalking)
+            {
+                _walkAudio.Play();
+                _isPlayingWalking = true;
+            }
+        }
+        else
+        {
+            _walkAudio.Stop();
+            _isPlayingWalking = false;
         }
 
-        _anim.Move(_moveDirection);
 
-        if(attacking)
+        if (attacking)
         {
             timer += Time.deltaTime;
-            if( timer >= timeToAttack)
+            if (timer >= timeToAttack)
             {
                 timer = 0;
-                attacking= false;
+                attacking = false;
                 _attackArea.SetActive(attacking);
                 _attack1.SetActive(attacking);
             }
@@ -196,7 +208,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-       
+
         if (isDashing)
         {
             return;
