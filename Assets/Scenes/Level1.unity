@@ -13139,7 +13139,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1281042257}
   m_Layer: 5
-  m_Name: DialogBox
+  m_Name: DialogueBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13435,6 +13435,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2eaaf5c0b92b85449c619a6c6eb1441, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dialogueBox: {fileID: 1281042256}
   textLabel: {fileID: 1754775991}
   testDialogue: {fileID: 11400000, guid: 2734370d1c74d2d428fbac1470c01255, type: 2}
 --- !u!114 &1310228764
@@ -14758,8 +14759,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 28
-  m_fontSizeBase: 28
+  m_fontSize: 38
+  m_fontSizeBase: 38
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
