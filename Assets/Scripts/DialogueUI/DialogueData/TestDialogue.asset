@@ -15,4 +15,9 @@ MonoBehaviour:
   dialogue:
   - ' Extra large dialogue that needs to be displayed for at least 0.5 seconds to
     be able to see it and see how it changes to the second dialogue'
-  - "A new and completely unique dialogue \nouiea"
+  - 'A new and completely unique, expressive, and something else dialogue !!!!
+
+    ouiea?'
+  characterName:
+  - Leo
+  - ???

@@ -7,5 +7,7 @@ using UnityEngine;
 public class DialogueObject : ScriptableObject
 {
     [SerializeField] [TextArea] private string[] dialogue;
+    [SerializeField] [TextArea] private string[] characterName;
     public string[] Dialogue => dialogue;
+    public string[] Name => characterName;
 }
