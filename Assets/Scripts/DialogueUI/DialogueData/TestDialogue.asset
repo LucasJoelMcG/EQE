@@ -13,11 +13,16 @@ MonoBehaviour:
   m_Name: TestDialogue
   m_EditorClassIdentifier: 
   dialogue:
-  - ' Extra large dialogue that needs to be displayed for at least 0.5 seconds to
-    be able to see it and see how it changes to the second dialogue'
-  - 'A new and completely unique, expressive, and something else dialogue !!!!
+  - "Dialogo extra largo para probar su visualizaci\xF3n"
+  - 'Un nuevo y completamente unico, expresivo, y algo mas dialogo!!!
 
-    ouiea?'
+    ouiea'
+  - "Qu\xE9 fu\xE9 eso?\n\"ouiea\"?"
   characterName:
   - Leo
   - ???
+  - Leo
+  characterImage:
+  - {fileID: 21300000, guid: c821f4d9bf376f44cb4f4225515a955a, type: 3}
+  - {fileID: 21300000, guid: c5e8aaaf8948b344b904a94b41e82b42, type: 3}
+  - {fileID: 21300000, guid: c821f4d9bf376f44cb4f4225515a955a, type: 3}
