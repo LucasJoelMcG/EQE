@@ -12,6 +12,7 @@ public class TriggerDamage : MonoBehaviour
             Health health = collider.GetComponent<Health>();
             health.Damage(damage);
             Destroy(gameObject);
+
         }
     }
 }

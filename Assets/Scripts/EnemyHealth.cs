@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -7,13 +6,12 @@ public class EnemyHealth : MonoBehaviour
 {
     [SerializeField] private int health;
     [SerializeField] private int _maxHealth;
+    private GameObject enemies;
     public GameObject healthBarUI;
     public Slider slider;
     private PlayerAnimation _anim;
     public int readHealth;        //Variable de lectura para Health
     public int readMaxHealth;     //Variable de lectura para _maxHealth
-
-
     [SerializeField] private GameObject DropItemPrefab;
     private int randomNumber;
     [SerializeField] private int plusProbability;
@@ -22,6 +20,8 @@ public class EnemyHealth : MonoBehaviour
     private void Awake()
     {
         _anim = GetComponent<PlayerAnimation>();
+        enemies = GameObject.Find("LevelManager");
+           
     }
     private void Start()
     {
@@ -91,6 +91,7 @@ public class EnemyHealth : MonoBehaviour
         Destroy(gameObject, 1.5f);
         GetComponent<Collider2D>().enabled = false;
         DropItem();
+        enemies.GetComponent<LevelManager>().enemyDeleted();
 
     }
 
