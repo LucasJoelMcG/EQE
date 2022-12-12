@@ -462,6 +462,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2540563241114287807, guid: c88dfcc1de8084b46a10a31d994bfd02, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 2076928361}
     - target: {fileID: 2540563241114287815, guid: c88dfcc1de8084b46a10a31d994bfd02, type: 3}
       propertyPath: m_Name
       value: Minion1 (11)
@@ -1009,6 +1013,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2540563241114287807, guid: c88dfcc1de8084b46a10a31d994bfd02, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 2076928361}
     - target: {fileID: 2540563241114287815, guid: c88dfcc1de8084b46a10a31d994bfd02, type: 3}
       propertyPath: m_Name
       value: Minion1 (7)
@@ -23257,6 +23265,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2540563241114287807, guid: c88dfcc1de8084b46a10a31d994bfd02, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 2076928361}
     - target: {fileID: 2540563241114287815, guid: c88dfcc1de8084b46a10a31d994bfd02, type: 3}
       propertyPath: m_Name
       value: Minion1
@@ -23557,6 +23569,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2540563241114287807, guid: c88dfcc1de8084b46a10a31d994bfd02, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 2076928361}
     - target: {fileID: 2540563241114287815, guid: c88dfcc1de8084b46a10a31d994bfd02, type: 3}
       propertyPath: m_Name
       value: Minion1 (4)
@@ -23655,6 +23671,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2540563241114287807, guid: c88dfcc1de8084b46a10a31d994bfd02, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 2076928361}
     - target: {fileID: 2540563241114287815, guid: c88dfcc1de8084b46a10a31d994bfd02, type: 3}
       propertyPath: m_Name
       value: Minion1 (2)
@@ -23717,6 +23737,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2540563241114287807, guid: c88dfcc1de8084b46a10a31d994bfd02, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 2076928361}
     - target: {fileID: 2540563241114287815, guid: c88dfcc1de8084b46a10a31d994bfd02, type: 3}
       propertyPath: m_Name
       value: Minion1 (12)
@@ -23933,6 +23957,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2540563241114287807, guid: c88dfcc1de8084b46a10a31d994bfd02, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 2076928361}
     - target: {fileID: 2540563241114287815, guid: c88dfcc1de8084b46a10a31d994bfd02, type: 3}
       propertyPath: m_Name
       value: Minion1 (9)
@@ -24271,6 +24299,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Villain
       objectReference: {fileID: 0}
+    - target: {fileID: 3215661213271145641, guid: c13c0cb2d1c975c40a11782e7ce7526c, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 2076928361}
     - target: {fileID: 3215661213271145646, guid: c13c0cb2d1c975c40a11782e7ce7526c, type: 3}
       propertyPath: m_SortingLayer
       value: 4
@@ -24795,6 +24827,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2540563241114287807, guid: c88dfcc1de8084b46a10a31d994bfd02, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 2076928361}
     - target: {fileID: 2540563241114287815, guid: c88dfcc1de8084b46a10a31d994bfd02, type: 3}
       propertyPath: m_Name
       value: Minion1 (3)
@@ -25113,6 +25149,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: SheVillain
       objectReference: {fileID: 0}
+    - target: {fileID: 4341225027883161309, guid: 6b7a806e645108d409f8a7f428641a25, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 2076928361}
+    - target: {fileID: 4341225027883161309, guid: 6b7a806e645108d409f8a7f428641a25, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6b7a806e645108d409f8a7f428641a25, type: 3}
 --- !u!1001 &763820074
@@ -25324,6 +25368,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2540563241114287807, guid: c88dfcc1de8084b46a10a31d994bfd02, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 2076928361}
     - target: {fileID: 2540563241114287815, guid: c88dfcc1de8084b46a10a31d994bfd02, type: 3}
       propertyPath: m_Name
       value: Minion1 (1)
@@ -25420,6 +25468,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2540563241114287807, guid: c88dfcc1de8084b46a10a31d994bfd02, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 2076928361}
     - target: {fileID: 2540563241114287815, guid: c88dfcc1de8084b46a10a31d994bfd02, type: 3}
       propertyPath: m_Name
       value: Minion1 (6)
@@ -25566,6 +25618,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2540563241114287807, guid: c88dfcc1de8084b46a10a31d994bfd02, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 2076928361}
     - target: {fileID: 2540563241114287815, guid: c88dfcc1de8084b46a10a31d994bfd02, type: 3}
       propertyPath: m_Name
       value: Minion1 (5)
@@ -25782,6 +25838,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2540563241114287807, guid: c88dfcc1de8084b46a10a31d994bfd02, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 2076928361}
     - target: {fileID: 2540563241114287815, guid: c88dfcc1de8084b46a10a31d994bfd02, type: 3}
       propertyPath: m_Name
       value: Minion1 (13)
@@ -26779,6 +26839,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2540563241114287807, guid: c88dfcc1de8084b46a10a31d994bfd02, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 2076928361}
     - target: {fileID: 2540563241114287815, guid: c88dfcc1de8084b46a10a31d994bfd02, type: 3}
       propertyPath: m_Name
       value: Minion1
@@ -28413,6 +28477,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2540563241114287807, guid: c88dfcc1de8084b46a10a31d994bfd02, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 2076928361}
     - target: {fileID: 2540563241114287815, guid: c88dfcc1de8084b46a10a31d994bfd02, type: 3}
       propertyPath: m_Name
       value: Minion1 (8)
@@ -132714,6 +132782,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2540563241114287807, guid: c88dfcc1de8084b46a10a31d994bfd02, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 2076928361}
     - target: {fileID: 2540563241114287815, guid: c88dfcc1de8084b46a10a31d994bfd02, type: 3}
       propertyPath: m_Name
       value: Minion1 (10)
@@ -133526,6 +133598,11 @@ PrefabInstance:
 --- !u!4 &2076928360 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6538157413818061601, guid: 6ee9a6c336e40fe479e56f59e08f1ee0, type: 3}
+  m_PrefabInstance: {fileID: 2076928359}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2076928361 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6538157413886080118, guid: 6ee9a6c336e40fe479e56f59e08f1ee0, type: 3}
   m_PrefabInstance: {fileID: 2076928359}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &2077285991
