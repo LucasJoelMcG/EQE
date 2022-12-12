@@ -68,9 +68,16 @@ public class Health : MonoBehaviour
             _anim.Die();
             Debug.Log("Animacion Dead");
             Die();
+            StartCoroutine(WaitBeforeEnd());
         }
     }
-    
+
+    private IEnumerator WaitBeforeEnd()
+    {
+        yield return new WaitForSeconds(0.9f);
+        Loader.Load(Loader.Scene.GameOverScene);
+    }
+
     public void Heal (int amount)
     {
         if (amount < 0)
