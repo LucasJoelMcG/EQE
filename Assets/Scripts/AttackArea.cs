@@ -1,8 +1,11 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class AttackArea : MonoBehaviour
 {
-    [SerializeField] public int damage;
+    public int damage = 30;
+
     private void OnTriggerEnter2D(Collider2D collider)
     {
         if (collider.GetComponent<Health>() != null)
@@ -13,12 +16,18 @@ public class AttackArea : MonoBehaviour
 
         if (collider.GetComponent<EnemyHealth>() != null)
         {
+            //Debug.Log("Damage Enemigo");
             EnemyHealth health = collider.GetComponent<EnemyHealth>();
             health.Damage(damage);
-            collider.transform.Translate(new Vector3(transform.localScale.x*0.01f,0,0));
 
         }
+        if (collider.GetComponent<Chest>() != null)
+        {
+            //Debug.Log("Damage Enemigo");
+            Chest health = collider.GetComponent<Chest>();
+            health.Damage(damage);
 
+        }
 
     }
 }

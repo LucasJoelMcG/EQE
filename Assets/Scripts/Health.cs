@@ -5,7 +5,7 @@ using System.Collections;
 
 public class Health : MonoBehaviour
 {
-    [SerializeField] public int health ;
+    [SerializeField] private int health ;
     [SerializeField] private int _maxHealth;
     private PlayerMovement playerMovement;
     public GameObject healthBarUI;

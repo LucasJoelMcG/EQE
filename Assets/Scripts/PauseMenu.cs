@@ -7,7 +7,6 @@ public class PauseMenu : MonoBehaviour
 {
     private PlayerInputsAction playerControls;
     private InputAction menu;
-
     [SerializeField] private GameObject pauseUI;
     [SerializeField] private bool isPaused;
 
@@ -15,12 +14,6 @@ public class PauseMenu : MonoBehaviour
     {
         playerControls = new PlayerInputsAction();
         pauseUI.SetActive(false);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     private void OnEnable()
@@ -55,6 +48,7 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 0f;
         pauseUI.SetActive(true);
         isPaused = true;
+        AudioListener.pause = true;
     }
 
     public void Resume()
@@ -62,6 +56,7 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1f;
         pauseUI.SetActive(false);
         isPaused = false;
+        AudioListener.pause = false;
     }
 
     public void LoadMenu()

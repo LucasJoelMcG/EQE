@@ -7,6 +7,7 @@ using UnityEngine.InputSystem;
 public class PlayerMovement : MonoBehaviour
 {
     public float moveSpeed = 5f;
+    public bool canBuff = true;
     private Rigidbody2D _rb;
     private SpriteRenderer _spriteRenderer;
     private Vector2 _moveDirection = Vector2.zero; //Atajo de (X:0;Y:0)
@@ -206,6 +207,23 @@ public class PlayerMovement : MonoBehaviour
         playerControls.Player.Attack.Disable();
     }
 
+    public void SpeedBuff()
+    {
+        if (canBuff)
+        {
+            StartCoroutine(Buff());
+        }
+
+    }
+
+    private IEnumerator Buff()
+    {
+        canBuff = false;
+        moveSpeed = moveSpeed + 2;
+        yield return new WaitForSeconds(10f);
+        moveSpeed = moveSpeed - 2;
+        canBuff = true;
+    }
     private void Update()
     {
 
