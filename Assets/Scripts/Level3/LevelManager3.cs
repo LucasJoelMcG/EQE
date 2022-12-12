@@ -3,26 +3,28 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class LevelManager : MonoBehaviour
+public class LevelManager3 : MonoBehaviour
 {
     private int enemies = 0;
-    private bool isBossDefeated = false;
-    private GameObject finalBarrier;
+    //private bool isBossDefeated = false;
+    [SerializeField] private GameObject finalBarrier;
 
     void Start()
     {
         enemies = GameObject.FindGameObjectsWithTag("Enemy").Length;
-        finalBarrier = GameObject.Find("BlockFire");
     }
 
     void FixedUpdate()
     {
-        if (enemies == 0 && isBossDefeated) { 
+        Debug.Log(enemies);
+        if (enemies == 6)
+        {
             finalBarrier.SetActive(false);
         }
     }
 
-    public int getEnemies (){
+    public int getEnemies()
+    {
         return enemies;
     }
     public void enemyDeleted()
@@ -30,9 +32,9 @@ public class LevelManager : MonoBehaviour
         enemies -= 1;
     }
 
-    public void bossDefeated ()
-    {
-        if (!isBossDefeated)
-            isBossDefeated=true;     
-    }
+    //public void bossDefeated()
+    //{
+    //    if (!isBossDefeated)
+    //        isBossDefeated = true;
+    //}
 }

@@ -1,32 +1,37 @@
-using System.Collections;
-using System.Collections.Generic;
+using JetBrains.Annotations;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class EnemyHealth : MonoBehaviour
 {
     [SerializeField] private int health;
     [SerializeField] private int _maxHealth;
+    private GameObject enemies;
     public GameObject healthBarUI;
     public Slider slider;
     private PlayerAnimation _anim;
     public int readHealth;        //Variable de lectura para Health
     public int readMaxHealth;     //Variable de lectura para _maxHealth
-
-
     [SerializeField] private GameObject DropItemPrefab;
     private int randomNumber;
     [SerializeField] private int plusProbability;
+    private string scene="";
 
 
     private void Awake()
     {
         _anim = GetComponent<PlayerAnimation>();
+       
     }
     private void Start()
     {
         health = _maxHealth;
         slider.value = CalculateHealth();
+        enemies = GameObject.FindGameObjectWithTag("LevelManager");
+        scene = "LevelManager" + SceneManager.GetActiveScene().buildIndex;
+        Debug.Log(scene);
     }
     void Update()
     {
@@ -91,16 +96,25 @@ public class EnemyHealth : MonoBehaviour
         Destroy(gameObject, 1.5f);
         GetComponent<Collider2D>().enabled = false;
         DropItem();
+        if (scene == "LevelManager1")
+            enemies.GetComponent<LevelManager>().enemyDeleted();
+        else
+            if (scene == "LevelManager2")
+                enemies.GetComponent<LevelManager2>().enemyDeleted();
+            else
+                if (scene == "LevelManager3")
+                    enemies.GetComponent<LevelManager3>().enemyDeleted();
 
     }
 
     private void DropItem()
     {
-        randomNumber = Random.Range(0, 100)+ plusProbability;
+        randomNumber = Random.Range(0, 100) + plusProbability;
         Debug.Log(randomNumber);
-        if (randomNumber > 50) { 
+        if (randomNumber > 50)
+        {
             GameObject Drop = Instantiate(DropItemPrefab, transform.position, Quaternion.identity, null);
-        
+
         }
 
     }
