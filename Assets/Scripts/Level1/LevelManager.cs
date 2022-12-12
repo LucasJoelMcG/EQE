@@ -6,7 +6,7 @@ using UnityEngine;
 public class LevelManager : MonoBehaviour
 {
     private int enemies = 0;
-    private bool isBossDefeated = false;
+    //private bool isBossDefeated = false;
     [SerializeField] private GameObject finalBarrier;
 
     void Start()
@@ -16,7 +16,7 @@ public class LevelManager : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (enemies == 0 && isBossDefeated) { 
+        if (enemies == 0) { 
             finalBarrier.SetActive(false);
         }
     }
@@ -29,9 +29,9 @@ public class LevelManager : MonoBehaviour
         enemies -= 1;
     }
 
-    public void bossDefeated ()
-    {
-        if (!isBossDefeated)
-            isBossDefeated=true;     
-    }
+    //public void bossDefeated ()
+    //{
+    //    if (!isBossDefeated)
+    //        isBossDefeated=true;     
+    //}
 }

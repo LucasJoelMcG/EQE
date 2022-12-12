@@ -24,7 +24,7 @@ public class TutoUI : MonoBehaviour
         panelAttack2.SetActive(false);
         panelEliminateEnemies.SetActive(false);
         panelHealPotion.SetActive(false);
-        LevelManager = GameObject.Find("LevelManager").GetComponent<LevelManager>();
+        LevelManager = GameObject.FindGameObjectWithTag("LevelManager").GetComponent<LevelManager>();
     }
 
     void FixedUpdate()
@@ -58,7 +58,6 @@ public class TutoUI : MonoBehaviour
         {
             panelHealPotion.SetActive(false);
             potions--;
-            LevelManager.bossDefeated();
         }
     }
 }
