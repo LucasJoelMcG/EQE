@@ -14,7 +14,8 @@ public static class Loader
         MapScene,
         LoadingScene,
         SettingsScene, 
-        MainMenu
+        MainMenu,
+        GameOverScene
     }
 
     private static Action onLoaderCallback;
