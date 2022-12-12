@@ -1,9 +1,10 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class DropPotion : MonoBehaviour
 {
     [SerializeField] private GameObject DropItemPrefab;
-    
     void Update()
     {
         GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");

@@ -10,15 +10,18 @@ public class CameraFollow : MonoBehaviour
 
     void FixedUpdate()
     {
-        //Posición del Player
-        Vector3 desiredPosition = target.position + offset;
+        if (target != null)
+        {
+            //Posición del Player
+            Vector3 desiredPosition = target.position + offset;
 
-        //Interpola la posición de la cámara con la del player en una velocidad definida por _smoothSpeed y Time.deltaTime
-        Vector3 smoothedPosition = Vector3.Lerp(transform.position, desiredPosition, _smoothSpeed * Time.deltaTime);
-        //Aplica la posición calculada
-        transform.position = smoothedPosition;
+            //Interpola la posición de la cámara con la del player en una velocidad definida por _smoothSpeed y Time.deltaTime
+            Vector3 smoothedPosition = Vector3.Lerp(transform.position, desiredPosition, _smoothSpeed * Time.deltaTime);
+            //Aplica la posición calculada
+            transform.position = smoothedPosition;
 
-        //La cámara siempre debe "mirar" al jugador
-        transform.LookAt(transform.position);
+            //La cámara siempre debe "mirar" al jugador
+            transform.LookAt(transform.position);
+        }
     }
 }
