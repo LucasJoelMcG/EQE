@@ -21,6 +21,10 @@ public class LevelManager3 : MonoBehaviour
         {
             finalBarrier.SetActive(false);
         }
+        else if (enemies <= 0)
+        {
+            Loader.Load(Loader.Scene.CreditsScene);
+        }
     }
 
     public int getEnemies()
