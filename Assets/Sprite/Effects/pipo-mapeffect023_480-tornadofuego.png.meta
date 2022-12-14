@@ -1,0 +1,563 @@
+fileFormatVersion: 2
+guid: 339b7def42570d94cb22d456ba54e01c
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 152
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: pipo-mapeffect023_480-tornadofuego_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 457.5
+        width: 152.6
+        height: 152.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2689313a6eaac6848ba3bed2f14af174
+      internalID: 322888411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipo-mapeffect023_480-tornadofuego_1
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 457.5
+        width: 152.6
+        height: 152.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad6f0d3cebc347945aa8ed0a19fa180a
+      internalID: -582095532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipo-mapeffect023_480-tornadofuego_2
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 457.5
+        width: 152.6
+        height: 152.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 759c784999ebd504b8a1960703db069e
+      internalID: 1951756029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipo-mapeffect023_480-tornadofuego_3
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 457.5
+        width: 152.6
+        height: 152.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98f90687b70d81b4b96554745848984d
+      internalID: -1917843636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipo-mapeffect023_480-tornadofuego_4
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 457.5
+        width: 152.6
+        height: 152.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ce1b38a25da36b4fb77c308103d7751
+      internalID: -812387453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipo-mapeffect023_480-tornadofuego_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 305.5
+        width: 152.6
+        height: 152.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78b6a9d2052d9224d954faa23b105c23
+      internalID: -686323239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipo-mapeffect023_480-tornadofuego_6
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 305.5
+        width: 152.6
+        height: 152.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e532e4b66d085d419c3097662affdf4
+      internalID: 8628200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipo-mapeffect023_480-tornadofuego_7
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 305.5
+        width: 152.6
+        height: 152.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7fc58946e9fc9048ab81474f3752a0e
+      internalID: -936452297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipo-mapeffect023_480-tornadofuego_8
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 305.5
+        width: 152.6
+        height: 152.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0204e5f81ea04fe4fa78694e0aea215d
+      internalID: -922335910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipo-mapeffect023_480-tornadofuego_9
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 305.5
+        width: 152.6
+        height: 152.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1fb890d2585ed44697c04d47de78f52
+      internalID: 1052338276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipo-mapeffect023_480-tornadofuego_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 153.5
+        width: 152.6
+        height: 152.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a86dc2c967646344bc4d60fefe0ec0d
+      internalID: 1363545790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipo-mapeffect023_480-tornadofuego_11
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 153.5
+        width: 152.6
+        height: 152.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee9ef89bfdbf4114383b7873818a3d9f
+      internalID: -950832474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipo-mapeffect023_480-tornadofuego_12
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 153.5
+        width: 152.6
+        height: 152.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcca1e7ed537a4245b0088b27a3a92f0
+      internalID: -1443036300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipo-mapeffect023_480-tornadofuego_13
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 153.5
+        width: 152.6
+        height: 152.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2217d7c1cab5fdc419597fc53faa297f
+      internalID: -93237200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipo-mapeffect023_480-tornadofuego_14
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 153.5
+        width: 152.6
+        height: 152.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc63abd1397ff0946addea70be893c84
+      internalID: -1774714513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipo-mapeffect023_480-tornadofuego_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1.5
+        width: 152.6
+        height: 152.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a807d4d22c78b71439131904c777190f
+      internalID: 1592110283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipo-mapeffect023_480-tornadofuego_16
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 1.5
+        width: 152.6
+        height: 152.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7db065a3f4f40984f991d81b9f609917
+      internalID: -640337482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipo-mapeffect023_480-tornadofuego_17
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 1.5
+        width: 152.6
+        height: 152.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a8d0c52f4dc8da429357b90717b066c
+      internalID: 445802021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipo-mapeffect023_480-tornadofuego_18
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 1.5
+        width: 152.6
+        height: 152.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d04cf0ed273fe7468806023111dda76
+      internalID: 1116814201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipo-mapeffect023_480-tornadofuego_19
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 1.5
+        width: 152.6
+        height: 152.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2501c9eda9fb15b4b8fa198eec801f04
+      internalID: -1987417743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      pipo-mapeffect023_480-tornadofuego_10: 1363545790
+      pipo-mapeffect023_480-tornadofuego_17: 445802021
+      pipo-mapeffect023_480-tornadofuego_6: 8628200
+      pipo-mapeffect023_480-tornadofuego_7: -936452297
+      pipo-mapeffect023_480-tornadofuego_13: -93237200
+      pipo-mapeffect023_480-tornadofuego_5: -686323239
+      pipo-mapeffect023_480-tornadofuego_0: 322888411
+      pipo-mapeffect023_480-tornadofuego_14: -1774714513
+      pipo-mapeffect023_480-tornadofuego_18: 1116814201
+      pipo-mapeffect023_480-tornadofuego_9: 1052338276
+      pipo-mapeffect023_480-tornadofuego_3: -1917843636
+      pipo-mapeffect023_480-tornadofuego_16: -640337482
+      pipo-mapeffect023_480-tornadofuego_8: -922335910
+      pipo-mapeffect023_480-tornadofuego_15: 1592110283
+      pipo-mapeffect023_480-tornadofuego_1: -582095532
+      pipo-mapeffect023_480-tornadofuego_4: -812387453
+      pipo-mapeffect023_480-tornadofuego_11: -950832474
+      pipo-mapeffect023_480-tornadofuego_12: -1443036300
+      pipo-mapeffect023_480-tornadofuego_2: 1951756029
+      pipo-mapeffect023_480-tornadofuego_19: -1987417743
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
