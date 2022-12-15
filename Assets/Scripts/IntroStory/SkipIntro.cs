@@ -8,7 +8,7 @@ public class SkipIntro : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            Loader.Load(Loader.Scene.MainMenu);
+            Loader.Load(Loader.Scene.IntroTitleScene);
         }
     }
 }

@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public static class Loader
 {
     public enum Scene {
+        IntroTitleScene,
         Level1,
         Level2,
         Level3,
