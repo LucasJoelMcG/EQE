@@ -905,7 +905,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1549257900406639791, guid: 6269f184b7dd77f4b9d292aae46c43c3, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1549257900552712412, guid: 6269f184b7dd77f4b9d292aae46c43c3, type: 3}
       propertyPath: m_AnchorMax.x
@@ -933,11 +933,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1549257901564128205, guid: 6269f184b7dd77f4b9d292aae46c43c3, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1549257901564128205, guid: 6269f184b7dd77f4b9d292aae46c43c3, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6269f184b7dd77f4b9d292aae46c43c3, type: 3}
@@ -28261,6 +28261,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1432053905}
   - component: {fileID: 1432053904}
+  - component: {fileID: 1432053906}
   m_Layer: 0
   m_Name: jarronDecorativo
   m_TagString: Untagged
@@ -28335,6 +28336,22 @@ Transform:
   m_Father: {fileID: 655610690}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!70 &1432053906
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1432053903}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 3.66, y: 5.65}
+  m_Direction: 0
 --- !u!1 &1434413043
 GameObject:
   m_ObjectHideFlags: 0
@@ -28677,6 +28694,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1503185024}
   - component: {fileID: 1503185023}
+  - component: {fileID: 1503185025}
   m_Layer: 0
   m_Name: jarroncito
   m_TagString: Untagged
@@ -28751,6 +28769,22 @@ Transform:
   m_Father: {fileID: 655610690}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!70 &1503185025
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1503185022}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 3.26, y: 5.64}
+  m_Direction: 0
 --- !u!1 &1522620722
 GameObject:
   m_ObjectHideFlags: 0
@@ -29355,6 +29389,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1679578310}
   - component: {fileID: 1679578309}
+  - component: {fileID: 1679578311}
   m_Layer: 0
   m_Name: vasijas
   m_TagString: Untagged
@@ -29429,6 +29464,22 @@ Transform:
   m_Father: {fileID: 655610690}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!70 &1679578311
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1679578308}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 3.55, y: 5.43}
+  m_Direction: 0
 --- !u!1 &1717824654
 GameObject:
   m_ObjectHideFlags: 0
@@ -29610,6 +29661,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1737799076}
   - component: {fileID: 1737799075}
+  - component: {fileID: 1737799077}
   m_Layer: 0
   m_Name: jarronNormal
   m_TagString: Untagged
@@ -29684,6 +29736,22 @@ Transform:
   m_Father: {fileID: 655610690}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!70 &1737799077
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1737799074}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 2.63, y: 5.65}
+  m_Direction: 0
 --- !u!1 &1754319937
 GameObject:
   m_ObjectHideFlags: 0
