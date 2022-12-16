@@ -30,7 +30,7 @@ public class EnemyHealth : MonoBehaviour
         health = _maxHealth;
         slider.value = CalculateHealth();
         enemies = GameObject.FindGameObjectWithTag("LevelManager");
-        scene = "LevelManager" + SceneManager.GetActiveScene().buildIndex;
+        scene = "LevelManager" + (SceneManager.GetActiveScene().buildIndex - 2);
         Debug.Log(scene);
     }
     void Update()
