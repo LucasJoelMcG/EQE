@@ -57,3 +57,9 @@ TagManager:
   - name: Char
     uniqueID: 3591703141
     locked: 0
+  - name: Walls
+    uniqueID: 1493378533
+    locked: 0
+  - name: Decoration
+    uniqueID: 1387906615
+    locked: 0

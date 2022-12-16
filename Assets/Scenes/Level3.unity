@@ -847,7 +847,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1549257900406639791, guid: 6269f184b7dd77f4b9d292aae46c43c3, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1549257900552712412, guid: 6269f184b7dd77f4b9d292aae46c43c3, type: 3}
       propertyPath: m_AnchorMax.x
@@ -875,11 +875,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1549257901564128205, guid: 6269f184b7dd77f4b9d292aae46c43c3, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1549257901564128205, guid: 6269f184b7dd77f4b9d292aae46c43c3, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6269f184b7dd77f4b9d292aae46c43c3, type: 3}
@@ -1342,7 +1342,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -22957,7 +22957,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &371345754
 GameObject:
@@ -23014,8 +23014,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1262624575
-  m_SortingLayer: 3
+  m_SortingLayerID: -612707621
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: e95bba349f6b8034e875be1270837459, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -23759,6 +23759,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1806553410}
     m_Modifications:
+    - target: {fileID: 2455619296274820796, guid: 2084199e11c6d2f498aeee2dd59fb896, type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455619296274820796, guid: 2084199e11c6d2f498aeee2dd59fb896, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -612707621
+      objectReference: {fileID: 0}
     - target: {fileID: 8802221740912456847, guid: 2084199e11c6d2f498aeee2dd59fb896, type: 3}
       propertyPath: m_Name
       value: alfombra-3 (2)
@@ -23877,8 +23885,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1262624575
-  m_SortingLayer: 3
+  m_SortingLayerID: -612707621
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: e95bba349f6b8034e875be1270837459, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -24912,8 +24920,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1262624575
-  m_SortingLayer: 3
+  m_SortingLayerID: -612707621
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: e95bba349f6b8034e875be1270837459, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -25553,8 +25561,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1262624575
-  m_SortingLayer: 3
+  m_SortingLayerID: -612707621
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: e95bba349f6b8034e875be1270837459, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -25703,8 +25711,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1262624575
-  m_SortingLayer: 3
+  m_SortingLayerID: -612707621
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: e95bba349f6b8034e875be1270837459, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -25724,6 +25732,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1806553410}
     m_Modifications:
+    - target: {fileID: 2455619296274820796, guid: 2084199e11c6d2f498aeee2dd59fb896, type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455619296274820796, guid: 2084199e11c6d2f498aeee2dd59fb896, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -612707621
+      objectReference: {fileID: 0}
     - target: {fileID: 8802221740912456847, guid: 2084199e11c6d2f498aeee2dd59fb896, type: 3}
       propertyPath: m_Name
       value: alfombra-3 (1)
@@ -27184,6 +27200,14 @@ PrefabInstance:
       propertyPath: m_FlipX
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2455619296274820796, guid: 2084199e11c6d2f498aeee2dd59fb896, type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455619296274820796, guid: 2084199e11c6d2f498aeee2dd59fb896, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -612707621
+      objectReference: {fileID: 0}
     - target: {fileID: 8802221740912456847, guid: 2084199e11c6d2f498aeee2dd59fb896, type: 3}
       propertyPath: m_Name
       value: alfombra-3 (3)
@@ -27734,8 +27758,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1262624575
-  m_SortingLayer: 3
+  m_SortingLayerID: -612707621
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: e95bba349f6b8034e875be1270837459, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -29265,8 +29289,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1262624575
-  m_SortingLayer: 3
+  m_SortingLayerID: -612707621
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: e95bba349f6b8034e875be1270837459, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -29625,8 +29649,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1262624575
-  m_SortingLayer: 3
+  m_SortingLayerID: -612707621
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: e95bba349f6b8034e875be1270837459, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -29709,8 +29733,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1262624575
-  m_SortingLayer: 3
+  m_SortingLayerID: -612707621
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: e95bba349f6b8034e875be1270837459, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -114975,13 +114999,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1852908041}
-  m_LocalRotation: {x: 0, y: 0, z: -0.043619405, w: 0.9990483}
-  m_LocalPosition: {x: 40.94, y: 42.8, z: 0}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0.043619405, w: 0.9990483}
+  m_LocalPosition: {x: -7.3523445, y: 18.478958, z: 0.86536545}
+  m_LocalScale: {x: 0.30000004, y: 0.30000004, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_Father: {fileID: 2054403002}
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -5}
 --- !u!1001 &1878080392
 PrefabInstance:
@@ -133363,6 +133387,7 @@ Transform:
   - {fileID: 1067255815}
   - {fileID: 1536042468}
   - {fileID: 1598470317}
+  - {fileID: 1852908043}
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -134042,6 +134067,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1806553410}
     m_Modifications:
+    - target: {fileID: 2455619296274820796, guid: 2084199e11c6d2f498aeee2dd59fb896, type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455619296274820796, guid: 2084199e11c6d2f498aeee2dd59fb896, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -612707621
+      objectReference: {fileID: 0}
     - target: {fileID: 8802221740912456847, guid: 2084199e11c6d2f498aeee2dd59fb896, type: 3}
       propertyPath: m_Name
       value: alfombra-3
