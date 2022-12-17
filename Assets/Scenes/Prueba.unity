@@ -1931,10 +1931,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1867231968097392959, guid: ad5ad35d71785ee4ca0d93593b35aab2, type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6796359885888796513, guid: ad5ad35d71785ee4ca0d93593b35aab2, type: 3}
       propertyPath: m_Name
       value: Lightning
