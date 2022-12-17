@@ -26,13 +26,18 @@ public class Health : MonoBehaviour
     private void Start()
     {
         health = _maxHealth;
-       slider.value = CalculateHealth();
+        if (slider != null)
+        {
+            slider.value = CalculateHealth();
+        }
     }
     void Update()
     {
         readHealth = health;
         readMaxHealth = _maxHealth;
+       if (slider != null) { 
         slider.value = CalculateHealth();
+        }
         if (health < _maxHealth)
         {
             healthBarUI.SetActive(true);
