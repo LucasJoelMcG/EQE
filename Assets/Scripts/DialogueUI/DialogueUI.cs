@@ -23,6 +23,7 @@ public class DialogueUI : MonoBehaviour
 
     public void ShowDialogue(DialogueObject dialogueObject)
     {
+        Time.timeScale = 0f;
         dialogueBox.SetActive(true);
         characterNameBox.SetActive(true);
         StartCoroutine(StepThroughDialogue(dialogueObject));
@@ -62,5 +63,6 @@ public class DialogueUI : MonoBehaviour
         textLabel.text = string.Empty;
         characterNameBox.SetActive(false);
         characterNameLabel.text = string.Empty;
+        Time.timeScale = 1f;
     }
 }

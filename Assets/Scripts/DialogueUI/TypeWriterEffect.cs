@@ -36,7 +36,7 @@ public class TypeWriterEffect : MonoBehaviour
         while (charIndex < textToType.Length)
         {
             int lastCharIndex = charIndex;
-            time += Time.deltaTime * typewriterSpeed;
+            time += Time.unscaledDeltaTime * typewriterSpeed;
             charIndex = Mathf.FloorToInt(time);
             charIndex = Mathf.Clamp(charIndex, 0, textToType.Length);
 
@@ -46,7 +46,7 @@ public class TypeWriterEffect : MonoBehaviour
                 textLabel.text = textToType.Substring(0, i + 1);
                 if (isPunctuation(textToType[i], out float waitTime) && !isLast && !isPunctuation(textToType[i + 1], out _))
                 {
-                    yield return new WaitForSeconds(waitTime);
+                    yield return new WaitForSecondsRealtime(waitTime);
                 }
             }
 
