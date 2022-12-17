@@ -27,9 +27,12 @@ public class EnemyAI : MonoBehaviour
     private Vector2 movementPerSecond;
     private float timeLeft;
     public float timeToMove = 10f;
-   // private float playerHealth;
+    // private float playerHealth;
     // Start is called before the first frame update
 
+    [SerializeField] private GameObject sAttack;
+    private bool sAttacking = false;
+    private bool canMove = true;
     private void Awake()
     {
         _spriteRenderer = GetComponentInChildren<SpriteRenderer>();
@@ -94,6 +97,23 @@ public class EnemyAI : MonoBehaviour
             transform.position = Vector2.MoveTowards(this.transform.position, player.transform.position, speed * 0.01f);
     }
 
+    IEnumerator SpecialAttack()
+    {
+        sAttacking = true;
+        canMove = false;
+        _anim.SpecialAttack();
+       // _audioSword.Play();
+        yield return new WaitForSeconds(1.2f);
+        // _attackArea.SetActive(true); despues de 1.4 s activo el collider
+        sAttack.SetActive(true);
+        yield return new WaitForSeconds(0.1f);
+        sAttack.SetActive(false); //despues de 0.1 s desactivo el collider
+        canMove = true;
+        //_attack1.SetActive(true);
+        yield return new WaitForSeconds(5f); //cooldown
+        sAttacking = false;
+    }
+
     void Update()
     {
         if (player == null)
@@ -114,7 +134,11 @@ public class EnemyAI : MonoBehaviour
             }
             else
             {
-                if (distance < distanceBetween && distance > 0.5f)
+                if (distance < distanceBetween && distance > 0.5f && !sAttacking)
+                {
+                    StartCoroutine(SpecialAttack());
+                }
+                if (distance < distanceBetween && distance > 0.5f && canMove)
                 {
                     transform.position = Vector2.MoveTowards(this.transform.position, player.transform.position, speed * Time.deltaTime);
                     Move();
