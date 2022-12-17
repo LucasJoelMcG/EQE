@@ -316,6 +316,11 @@ MonoBehaviour:
   _rb: {fileID: 0}
   timeToMove: 2
   sAttack: {fileID: 0}
+--- !u!1 &336768109 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6796359885888796513, guid: ad5ad35d71785ee4ca0d93593b35aab2, type: 3}
+  m_PrefabInstance: {fileID: 6796359885552294668}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &564643378
 GameObject:
   m_ObjectHideFlags: 0
@@ -1138,7 +1143,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3215661213271145632, guid: c13c0cb2d1c975c40a11782e7ce7526c, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3215661213271145641, guid: c13c0cb2d1c975c40a11782e7ce7526c, type: 3}
       propertyPath: player
@@ -1147,7 +1152,7 @@ PrefabInstance:
     - target: {fileID: 3215661213271145641, guid: c13c0cb2d1c975c40a11782e7ce7526c, type: 3}
       propertyPath: sAttack
       value: 
-      objectReference: {fileID: 1510458287}
+      objectReference: {fileID: 336768109}
     - target: {fileID: 3215661213271145641, guid: c13c0cb2d1c975c40a11782e7ce7526c, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -1926,9 +1931,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1867231968097392959, guid: ad5ad35d71785ee4ca0d93593b35aab2, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6796359885888796513, guid: ad5ad35d71785ee4ca0d93593b35aab2, type: 3}
       propertyPath: m_Name
       value: Lightning
+      objectReference: {fileID: 0}
+    - target: {fileID: 6796359885888796513, guid: ad5ad35d71785ee4ca0d93593b35aab2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6796359885888796540, guid: ad5ad35d71785ee4ca0d93593b35aab2, type: 3}
       propertyPath: m_RootOrder
