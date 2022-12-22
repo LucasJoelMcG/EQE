@@ -9,11 +9,14 @@ public class PauseMenu : MonoBehaviour
     private InputAction menu;
     [SerializeField] private GameObject pauseUI;
     [SerializeField] private bool isPaused;
+    [SerializeField] private GameObject opcionCanvas;
 
     void Awake()
     {
         playerControls = new PlayerInputsAction();
         pauseUI.SetActive(false);
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     private void OnEnable()
@@ -49,6 +52,8 @@ public class PauseMenu : MonoBehaviour
         pauseUI.SetActive(true);
         isPaused = true;
         AudioListener.pause = true;
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
     }
 
     public void Resume()
@@ -57,11 +62,15 @@ public class PauseMenu : MonoBehaviour
         pauseUI.SetActive(false);
         isPaused = false;
         AudioListener.pause = false;
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
-    public void LoadMenu()
+    public void OpcionMenu()
     {
-        Debug.Log("Loading Menu");
+        opcionCanvas.SetActive(true);
+        pauseUI.SetActive(false) ;
+
     }
     
     public void QuitGame()
