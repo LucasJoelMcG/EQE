@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5852188793214229900}
   - component: {fileID: 5852188793214229903}
   m_Layer: 5
-  m_Name: MenuButton
+  m_Name: OpcionesButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -124,7 +124,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 5852188794391349227}
         m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
-        m_MethodName: LoadMenu
+        m_MethodName: OpcionMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -151,7 +151,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &5852188793378550943
 RectTransform:
   m_ObjectHideFlags: 0
@@ -280,7 +280,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: RESUME
+  m_text: RESUMEN
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -480,6 +480,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseUI: {fileID: 5852188793378550942}
   isPaused: 0
+  opcionCanvas: {fileID: 2665483491973871401, guid: e9a6d868df74b9a44a441ca9b0b6ab36, type: 3}
 --- !u!1 &5852188794585023420
 GameObject:
   m_ObjectHideFlags: 0
@@ -493,7 +494,7 @@ GameObject:
   - component: {fileID: 5852188794585023363}
   - component: {fileID: 5852188794585023362}
   m_Layer: 5
-  m_Name: QuitButton
+  m_Name: SalidaButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -681,7 +682,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'MENU
+  m_text: 'OPCIONES
 
 '
   m_isRightToLeft: 0
@@ -834,7 +835,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: QUIT
+  m_text: SALIR
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -931,7 +932,7 @@ GameObject:
   - component: {fileID: 5852188795249932300}
   - component: {fileID: 5852188795249932303}
   m_Layer: 5
-  m_Name: ResumeButton
+  m_Name: ResumenButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

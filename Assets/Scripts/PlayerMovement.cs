@@ -155,7 +155,7 @@ public class PlayerMovement : MonoBehaviour
     {
         canDash = false;
         isDashing = true;
-        _rb.velocity = new Vector2(_moveDirection.x * dashinPower, 0f);
+        _rb.velocity = new Vector2(_moveDirection.x * dashinPower, _moveDirection.y * dashinPower);
         _dashAudio.Play();
         //_capsuleCollider.enabled = false;
         Physics2D.IgnoreLayerCollision(6, 7, true);
