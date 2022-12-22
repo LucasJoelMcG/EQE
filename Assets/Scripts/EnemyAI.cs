@@ -19,8 +19,8 @@ public class EnemyAI : MonoBehaviour
     private EnemyHealth _enemyHealth;
     private bool attacking = false;
     private float distance;
-   // private float timeToAttack = 1f;
-   // private float timer = 0f;
+    // private float timeToAttack = 1f;
+    // private float timer = 0f;
 
     public Rigidbody2D _rb;
     private Vector2 movementDirection;
@@ -33,6 +33,7 @@ public class EnemyAI : MonoBehaviour
     [SerializeField] private GameObject sAttack;
     private bool sAttacking = false;
     private bool canMove = true;
+    //private CircleCollider2D sAttackCollider;
     private void Awake()
     {
         _spriteRenderer = GetComponentInChildren<SpriteRenderer>();
@@ -43,6 +44,8 @@ public class EnemyAI : MonoBehaviour
         _rb = GetComponent<Rigidbody2D>();
         _enemyHealth = GetComponent<EnemyHealth>();
         //playerHealth = GetComponent<Health>().readHealth;
+        sAttack.GetComponent<CircleCollider2D>().enabled=false;
+
     }
     void Start()
     {
@@ -79,7 +82,7 @@ public class EnemyAI : MonoBehaviour
             _attackArea.transform.localScale = new Vector2(1f, 1f);
             _attack1.transform.localPosition = new Vector2(1f, 0f);
         }
-       
+
     }
     IEnumerator Attack()
     {
@@ -99,19 +102,25 @@ public class EnemyAI : MonoBehaviour
 
     IEnumerator SpecialAttack()
     {
-        sAttacking = true;
-        canMove = false;
-        _anim.SpecialAttack();
-       // _audioSword.Play();
-        yield return new WaitForSeconds(1.2f);
-        // _attackArea.SetActive(true); despues de 1.4 s activo el collider
-        sAttack.SetActive(true);
-        yield return new WaitForSeconds(0.1f);
-        sAttack.SetActive(false); //despues de 0.1 s desactivo el collider
-        canMove = true;
-        //_attack1.SetActive(true);
-        yield return new WaitForSeconds(5f); //cooldown
-        sAttacking = false;
+        if (sAttack != null)
+        {
+            sAttacking = true;
+            canMove = false;
+            _anim.SpecialAttack();
+            // _audioSword.Play();
+            sAttack.SetActive(true);
+            yield return new WaitForSeconds(1f);
+            // _attackArea.SetActive(true); despues de 1.4 s activo el collider
+            sAttack.GetComponent<CircleCollider2D>().enabled = true;
+            yield return new WaitForSeconds(0.1f);
+            sAttack.SetActive(false); //despues de 0.1 s desactivo el collider
+            sAttack.GetComponent<CircleCollider2D>().enabled = false;
+            canMove = true;
+            //_attack1.SetActive(true);
+            yield return new WaitForSeconds(5f); //cooldown
+            sAttacking = false;
+
+        }
     }
 
     void Update()

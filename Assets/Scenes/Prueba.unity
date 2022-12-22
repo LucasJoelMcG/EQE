@@ -1161,6 +1161,10 @@ PrefabInstance:
       propertyPath: attackDistance
       value: 1.4
       objectReference: {fileID: 0}
+    - target: {fileID: 3215661213271145641, guid: c13c0cb2d1c975c40a11782e7ce7526c, type: 3}
+      propertyPath: sAttackCollider
+      value: 
+      objectReference: {fileID: 1867231968097392959, guid: ad5ad35d71785ee4ca0d93593b35aab2, type: 3}
     - target: {fileID: 3215661213271145647, guid: c13c0cb2d1c975c40a11782e7ce7526c, type: 3}
       propertyPath: m_RootOrder
       value: 10
@@ -1931,13 +1935,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1867231968097392959, guid: ad5ad35d71785ee4ca0d93593b35aab2, type: 3}
+      propertyPath: m_Radius
+      value: 0.4132558
+      objectReference: {fileID: 0}
+    - target: {fileID: 1867231968097392959, guid: ad5ad35d71785ee4ca0d93593b35aab2, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1867231968097392959, guid: ad5ad35d71785ee4ca0d93593b35aab2, type: 3}
+      propertyPath: m_Offset.y
+      value: -1.3170403
+      objectReference: {fileID: 0}
     - target: {fileID: 6796359885888796513, guid: ad5ad35d71785ee4ca0d93593b35aab2, type: 3}
       propertyPath: m_Name
       value: Lightning
       objectReference: {fileID: 0}
     - target: {fileID: 6796359885888796513, guid: ad5ad35d71785ee4ca0d93593b35aab2, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6796359885888796540, guid: ad5ad35d71785ee4ca0d93593b35aab2, type: 3}
       propertyPath: m_RootOrder
