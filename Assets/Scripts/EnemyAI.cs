@@ -106,23 +106,40 @@ public class EnemyAI : MonoBehaviour
         {
             sAttacking = true;
             canMove = false;
-            _anim.SpecialAttack();
-            // _audioSword.Play();
-            sAttack.SetActive(true);
+            _anim.SpecialAttack();  //cast
+            StartCoroutine(invokeThunders(transform));
+            //sAttacking = true;
+            //canMove = false;
+            //_anim.SpecialAttack();
+            //// _audioSword.Play();
+            //sAttack.SetActive(true);
             yield return new WaitForSeconds(1f);
-            // _attackArea.SetActive(true); despues de 1.4 s activo el collider
-            sAttack.GetComponent<CircleCollider2D>().enabled = true;
-            yield return new WaitForSeconds(0.1f);
-            sAttack.SetActive(false); //despues de 0.1 s desactivo el collider
-            sAttack.GetComponent<CircleCollider2D>().enabled = false;
+            //// _attackArea.SetActive(true); despues de 1.4 s activo el collider
+            //sAttack.GetComponent<CircleCollider2D>().enabled = true;
+            //yield return new WaitForSeconds(0.1f);
+            //sAttack.SetActive(false); //despues de 0.1 s desactivo el collider
+            //sAttack.GetComponent<CircleCollider2D>().enabled = false;
             canMove = true;
-            //_attack1.SetActive(true);
+            ////_attack1.SetActive(true);
             yield return new WaitForSeconds(5f); //cooldown
             sAttacking = false;
-
+            
         }
     }
 
+    IEnumerator invokeThunders(Transform enemyTrans)
+    {
+        yield return new WaitForSeconds(1f);
+        for (int i=1; i<=5; i++)
+        {
+            for (int j=0; j<=0; j++)
+            {
+                Instantiate(sAttack, transform.position+new Vector3(i,j,0),Quaternion.identity);
+            }
+            yield return new WaitForSeconds(1f);
+        }
+    }
+    
     void Update()
     {
         if (player == null)
