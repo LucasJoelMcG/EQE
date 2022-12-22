@@ -130,11 +130,12 @@ public class EnemyAI : MonoBehaviour
     IEnumerator invokeThunders(Transform enemyTrans)
     {
         yield return new WaitForSeconds(1f);
-        for (int i=1; i<=5; i++)
+        for (int j=0; j<=4; j++)
         {
-            for (int j=0; j<=0; j++)
+            for (int i=1; i<=5; i++)
             {
-                Instantiate(sAttack, transform.position+new Vector3(i,j,0),Quaternion.identity);
+                Instantiate(sAttack, transform.position + new Vector3(i, j, 0), Quaternion.identity);
+                Instantiate(sAttack, transform.position + new Vector3(-i, j, 0), Quaternion.identity);
             }
             yield return new WaitForSeconds(1f);
         }

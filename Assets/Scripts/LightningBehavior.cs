@@ -4,10 +4,15 @@ using UnityEngine;
 
 public class LightningBehavior : MonoBehaviour
 {
-    // Start is called before the first frame update
     void Awake()
     {
         gameObject.SetActive(true);
-        
+        StartCoroutine(selfDestruct());
+    }
+
+    IEnumerator selfDestruct()
+    {
+        yield return new WaitForSeconds(1f);
+        Destroy(gameObject);    
     }
 }
