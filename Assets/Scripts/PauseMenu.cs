@@ -15,6 +15,7 @@ public class PauseMenu : MonoBehaviour
     {
         playerControls = new PlayerInputsAction();
         pauseUI.SetActive(false);
+        opcionCanvas.SetActive(false);
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
     }

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2859303698512938863}
   - component: {fileID: 118824496301185159}
   - component: {fileID: 663078677644294861}
-  - component: {fileID: 2397577023225914041}
+  - component: {fileID: 5839123902114977392}
   m_Layer: 0
   m_Name: Attack1
   m_TagString: Untagged
@@ -137,7 +137,7 @@ PolygonCollider2D:
       - {x: 0.31883103, y: -0.32649267}
       - {x: 0.5568645, y: -0.101326406}
       - {x: 0.18960103, y: 0.2508832}
---- !u!114 &2397577023225914041
+--- !u!114 &5839123902114977392
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -146,7 +146,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5418848383029308347}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 833cdf240be32ee4cb85799f8645ddfc, type: 3}
+  m_Script: {fileID: 11500000, guid: 059382ab03578e74c957213badd00ccf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 30
