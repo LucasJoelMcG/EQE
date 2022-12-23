@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -108,20 +109,9 @@ public class EnemyAI : MonoBehaviour
             canMove = false;
             _anim.SpecialAttack();  //cast
             StartCoroutine(invokeThunders(transform));
-            //sAttacking = true;
-            //canMove = false;
-            //_anim.SpecialAttack();
-            //// _audioSword.Play();
-            //sAttack.SetActive(true);
             yield return new WaitForSeconds(1f);
-            //// _attackArea.SetActive(true); despues de 1.4 s activo el collider
-            //sAttack.GetComponent<CircleCollider2D>().enabled = true;
-            //yield return new WaitForSeconds(0.1f);
-            //sAttack.SetActive(false); //despues de 0.1 s desactivo el collider
-            //sAttack.GetComponent<CircleCollider2D>().enabled = false;
             canMove = true;
-            ////_attack1.SetActive(true);
-            yield return new WaitForSeconds(5f); //cooldown
+            yield return new WaitForSeconds(10f); //cooldown
             sAttacking = false;
             
         }
@@ -130,14 +120,10 @@ public class EnemyAI : MonoBehaviour
     IEnumerator invokeThunders(Transform enemyTrans)
     {
         yield return new WaitForSeconds(1f);
-        for (int j=0; j<=4; j++)
+        for (int i = 0; i < 20; i++)
         {
-            for (int i=1; i<=5; i++)
-            {
-                Instantiate(sAttack, transform.position + new Vector3(i, j, 0), Quaternion.identity);
-                Instantiate(sAttack, transform.position + new Vector3(-i, j, 0), Quaternion.identity);
-            }
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(0.2f);
+            Instantiate(sAttack, transform.position + new Vector3(Random.Range(-5f, 5f), Random.Range(-5f, 5f), 0f),Quaternion.identity);
         }
     }
     
