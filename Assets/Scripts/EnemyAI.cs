@@ -45,7 +45,6 @@ public class EnemyAI : MonoBehaviour
         _rb = GetComponent<Rigidbody2D>();
         _enemyHealth = GetComponent<EnemyHealth>();
         //playerHealth = GetComponent<Health>().readHealth;
-        sAttack.GetComponent<CircleCollider2D>().enabled=false;
 
     }
     void Start()
