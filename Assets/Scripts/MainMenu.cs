@@ -3,6 +3,11 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+    public void Start()
+    {
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+    }
     public void LoadScene()
     {
         Loader.Load(Loader.Scene.MapScene);
@@ -15,7 +20,6 @@ public class MainMenu : MonoBehaviour
 
     public void ExitGame()
     {
-        //UnityEditor.EditorApplication.isPlaying = false; // Para cerrar el editor de unity
-        Application.Quit(); // Para cerrar el juego ya exportado
+        Application.Quit();
     }
 }

@@ -9,6 +9,21 @@ public class MapSceneUI : MonoBehaviour
     public Button settingsButton;
     public Button menuButton;
     public bool showDropdown;
+    public Button[] levelsButtons;
+
+    private void Start()
+    {
+        for (int i = 0; i < levelsButtons.Length; i++)
+        {
+            int level = PlayerPrefs.GetInt("level", 0);
+            Debug.Log("level" + level);
+            Debug.Log("i" + i);
+            if (i > level)
+            {
+                levelsButtons[i].interactable = false;
+            }
+        }
+    }
 
     public void LoadLevel1()
     {

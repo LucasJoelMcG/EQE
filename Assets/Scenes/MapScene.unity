@@ -1162,6 +1162,7 @@ MonoBehaviour:
   settingsButton: {fileID: 0}
   menuButton: {fileID: 0}
   showDropdown: 0
+  levelsButtons: []
 --- !u!1 &812949260
 GameObject:
   m_ObjectHideFlags: 0
@@ -1404,6 +1405,10 @@ MonoBehaviour:
   settingsButton: {fileID: 11017939}
   menuButton: {fileID: 186620577}
   showDropdown: 0
+  levelsButtons:
+  - {fileID: 1885156711}
+  - {fileID: 2107261623}
+  - {fileID: 760134490}
 --- !u!114 &1006216693
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2085,6 +2090,7 @@ MonoBehaviour:
   settingsButton: {fileID: 0}
   menuButton: {fileID: 0}
   showDropdown: 0
+  levelsButtons: []
 --- !u!1 &1991235131
 GameObject:
   m_ObjectHideFlags: 0
@@ -2343,6 +2349,7 @@ MonoBehaviour:
   settingsButton: {fileID: 0}
   menuButton: {fileID: 0}
   showDropdown: 0
+  levelsButtons: []
 --- !u!1 &2120092618
 GameObject:
   m_ObjectHideFlags: 0
