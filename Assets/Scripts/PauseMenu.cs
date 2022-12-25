@@ -76,6 +76,9 @@ public class PauseMenu : MonoBehaviour
     
     public void QuitGame()
     {
-        Debug.Log("Quitting Game");
+        Time.timeScale = 1f;
+        isPaused = false;
+        AudioListener.pause = false;
+        Loader.Load(Loader.Scene.MapScene);
     }
 }
