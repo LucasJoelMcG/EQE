@@ -7,4 +7,9 @@ public class SettingsManager : MonoBehaviour
     {
         Loader.Load(Loader.Scene.MainMenu);
     }
+
+    public void ResetGame()
+    {
+        PlayerPrefs.SetInt("level", 3);
+    }
 }
