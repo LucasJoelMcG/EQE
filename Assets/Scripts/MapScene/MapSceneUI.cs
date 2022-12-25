@@ -15,7 +15,7 @@ public class MapSceneUI : MonoBehaviour
     {
         for (int i = 0; i < levelsButtons.Length; i++)
         {
-            int level = PlayerPrefs.GetInt("level", 0);
+            int level = PlayerPrefs.GetInt("level", 3);
             if (i + 3 > level)
             {
                 levelsButtons[i].interactable = false;
