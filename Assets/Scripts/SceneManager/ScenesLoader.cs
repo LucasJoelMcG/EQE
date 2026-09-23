@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class ScenesLoader : MonoBehaviour
 {
+    public void LoadIntroTitle()
+    {
+        Loader.Load(Loader.Scene.IntroTitleScene);
+    }
     public void LoadMenu()
     {
         Loader.Load(Loader.Scene.MainMenu);

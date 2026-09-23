@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4ed00b1cf8a42f438112896c273eafb, type: 3}
+  m_Name: DialogueLevel1
+  m_EditorClassIdentifier: 
+  dialogue:
+  - "Mi nombre es Leo y debo vengar a mi maestro Pilan, quien muri\xF3 por proteger
+    la f\xF3rmula del \xE9ter\u2026"
+  - "una sustancia misteriosa creada por \xE9l que nos da ventaja a la hora de luchar,
+    permitiendo prender fuego objetos, cegar y dormir a nuestros enemigos.  "
+  - "Ayudame a vengar a mi maestro y lograr que el reino no se convierta en un caos
+    por estar en manos de mi ex compa\xF1ero de entrenamiento Dmitri."
+  - "Espero lograr llegar a \xE9l antes de que logre descifrar la f\xF3rmula y se
+    convierta en casi invencible."
+  - "No va a ser f\xE1cil, Dmitri no est\xE1 solo, con \xE9l se encuentran mis otros
+    2 compa\xF1eros\u2026 Alessandra y Eoin, junto a sus nuevos adeptos."
+  - "\xA1Hagamos juntos que el honor prevalezca!"
+  characterName:
+  - Leo
+  - Leo
+  - Leo
+  - Leo
+  - Leo
+  - Leo
+  characterImage:
+  - {fileID: 21300000, guid: 8a0eb4d7f32ad0543842502bec264d2a, type: 3}
+  - {fileID: 21300000, guid: 8a0eb4d7f32ad0543842502bec264d2a, type: 3}
+  - {fileID: 21300000, guid: 8a0eb4d7f32ad0543842502bec264d2a, type: 3}
+  - {fileID: 21300000, guid: 8a0eb4d7f32ad0543842502bec264d2a, type: 3}
+  - {fileID: 21300000, guid: 8a0eb4d7f32ad0543842502bec264d2a, type: 3}
+  - {fileID: 21300000, guid: 8a0eb4d7f32ad0543842502bec264d2a, type: 3}

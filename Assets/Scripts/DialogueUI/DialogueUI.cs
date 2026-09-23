@@ -10,7 +10,8 @@ public class DialogueUI : MonoBehaviour
     [SerializeField] private GameObject characterNameBox;
     [SerializeField] private TMP_Text characterNameLabel;
     [SerializeField] private GameObject characterImage;
-    [SerializeField] private DialogueObject testDialogue;
+
+    public bool IsOpen { get; private set; }
 
     private TypeWriterEffect typeWriterEffect;
 
@@ -18,11 +19,12 @@ public class DialogueUI : MonoBehaviour
     {
         typeWriterEffect = GetComponent<TypeWriterEffect>();
         CloseDialogueBox();
-        ShowDialogue(testDialogue);
     }
 
     public void ShowDialogue(DialogueObject dialogueObject)
     {
+        IsOpen = true;
+        Time.timeScale = 0f;
         dialogueBox.SetActive(true);
         characterNameBox.SetActive(true);
         StartCoroutine(StepThroughDialogue(dialogueObject));
@@ -58,9 +60,11 @@ public class DialogueUI : MonoBehaviour
 
     private void CloseDialogueBox()
     {
+        IsOpen = false;
         dialogueBox.SetActive(false);
         textLabel.text = string.Empty;
         characterNameBox.SetActive(false);
         characterNameLabel.text = string.Empty;
+        Time.timeScale = 1f;
     }
 }

@@ -8,6 +8,7 @@ public class LevelManager2 : MonoBehaviour
     private int enemies = 0;
     [SerializeField] private GameObject finalBarrier1;
     [SerializeField] private GameObject finalBarrier2;
+    [SerializeField] private GameObject canvasBoss;
 
 
     void Start()
@@ -25,6 +26,7 @@ public class LevelManager2 : MonoBehaviour
         if (enemies == 4)
         {
             finalBarrier1.SetActive(false);
+            canvasBoss.SetActive(true);
         }
     }
 

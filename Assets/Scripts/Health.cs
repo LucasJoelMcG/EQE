@@ -26,13 +26,18 @@ public class Health : MonoBehaviour
     private void Start()
     {
         health = _maxHealth;
-       slider.value = CalculateHealth();
+        if (slider != null)
+        {
+            slider.value = CalculateHealth();
+        }
     }
     void Update()
     {
         readHealth = health;
         readMaxHealth = _maxHealth;
+       if (slider != null) { 
         slider.value = CalculateHealth();
+        }
         if (health < _maxHealth)
         {
             healthBarUI.SetActive(true);
@@ -68,9 +73,16 @@ public class Health : MonoBehaviour
             _anim.Die();
             Debug.Log("Animacion Dead");
             Die();
+            StartCoroutine(WaitBeforeEnd());
         }
     }
-    
+
+    private IEnumerator WaitBeforeEnd()
+    {
+        yield return new WaitForSeconds(0.9f);
+        Loader.Load(Loader.Scene.GameOverScene);
+    }
+
     public void Heal (int amount)
     {
         if (amount < 0)

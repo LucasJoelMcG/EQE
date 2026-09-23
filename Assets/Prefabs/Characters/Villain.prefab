@@ -265,6 +265,7 @@ MonoBehaviour:
   attackDistance: 0.8
   _rb: {fileID: 0}
   timeToMove: 2
+  sAttack: {fileID: 6229361212504415402, guid: 314c5bd6847673246a284568e1204a5f, type: 3}
 --- !u!114 &3215661213271145640
 MonoBehaviour:
   m_ObjectHideFlags: 0

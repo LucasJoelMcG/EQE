@@ -42,6 +42,12 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private AudioSource _walkAudio;
     [SerializeField] private AudioSource _dashAudio;
 
+    //Dialogue
+    [SerializeField] private DialogueUI dialogueUI;
+    public DialogueUI DialogueUI => dialogueUI;
+
+    public IInteractable Interactable { get; set; }
+
     private bool _isPlayingWalking = false;
     private void Awake()
     {
@@ -149,7 +155,7 @@ public class PlayerMovement : MonoBehaviour
     {
         canDash = false;
         isDashing = true;
-        _rb.velocity = new Vector2(_moveDirection.x * dashinPower, 0f);
+        _rb.velocity = new Vector2(_moveDirection.x * dashinPower, _moveDirection.y * dashinPower);
         _dashAudio.Play();
         //_capsuleCollider.enabled = false;
         Physics2D.IgnoreLayerCollision(6, 7, true);
@@ -226,6 +232,10 @@ public class PlayerMovement : MonoBehaviour
     }
     private void Update()
     {
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            Interactable?.Interact(this);
+        }
 
         if (isDashing)
         {

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -19,17 +20,21 @@ public class EnemyAI : MonoBehaviour
     private EnemyHealth _enemyHealth;
     private bool attacking = false;
     private float distance;
-   // private float timeToAttack = 1f;
-   // private float timer = 0f;
+    // private float timeToAttack = 1f;
+    // private float timer = 0f;
 
     public Rigidbody2D _rb;
     private Vector2 movementDirection;
     private Vector2 movementPerSecond;
     private float timeLeft;
     public float timeToMove = 10f;
-   // private float playerHealth;
+    // private float playerHealth;
     // Start is called before the first frame update
 
+    [SerializeField] private GameObject sAttack;
+    private bool sAttacking = false;
+    private bool canMove = true;
+    //private CircleCollider2D sAttackCollider;
     private void Awake()
     {
         _spriteRenderer = GetComponentInChildren<SpriteRenderer>();
@@ -40,6 +45,7 @@ public class EnemyAI : MonoBehaviour
         _rb = GetComponent<Rigidbody2D>();
         _enemyHealth = GetComponent<EnemyHealth>();
         //playerHealth = GetComponent<Health>().readHealth;
+
     }
     void Start()
     {
@@ -76,7 +82,7 @@ public class EnemyAI : MonoBehaviour
             _attackArea.transform.localScale = new Vector2(1f, 1f);
             _attack1.transform.localPosition = new Vector2(1f, 0f);
         }
-       
+
     }
     IEnumerator Attack()
     {
@@ -94,6 +100,32 @@ public class EnemyAI : MonoBehaviour
             transform.position = Vector2.MoveTowards(this.transform.position, player.transform.position, speed * 0.01f);
     }
 
+    IEnumerator SpecialAttack()
+    {
+        if (sAttack != null)
+        {
+            sAttacking = true;
+            canMove = false;
+            _anim.SpecialAttack();  //cast
+            StartCoroutine(invokeThunders(transform));
+            yield return new WaitForSeconds(1f);
+            canMove = true;
+            yield return new WaitForSeconds(10f); //cooldown
+            sAttacking = false;
+            
+        }
+    }
+
+    IEnumerator invokeThunders(Transform enemyTrans)
+    {
+        yield return new WaitForSeconds(1f);
+        for (int i = 0; i < 20; i++)
+        {
+            yield return new WaitForSeconds(0.2f);
+            Instantiate(sAttack, transform.position + new Vector3(Random.Range(-5f, 5f), Random.Range(-5f, 5f), 0f),Quaternion.identity);
+        }
+    }
+    
     void Update()
     {
         if (player == null)
@@ -114,7 +146,11 @@ public class EnemyAI : MonoBehaviour
             }
             else
             {
-                if (distance < distanceBetween && distance > 0.5f)
+                if (distance < distanceBetween && distance > 0.5f && !sAttacking)
+                {
+                    StartCoroutine(SpecialAttack());
+                }
+                if (distance < distanceBetween && distance > 0.5f && canMove)
                 {
                     transform.position = Vector2.MoveTowards(this.transform.position, player.transform.position, speed * Time.deltaTime);
                     Move();

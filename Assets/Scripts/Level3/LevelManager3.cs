@@ -8,6 +8,7 @@ public class LevelManager3 : MonoBehaviour
     private int enemies = 0;
     //private bool isBossDefeated = false;
     [SerializeField] private GameObject finalBarrier;
+    [SerializeField] private GameObject canvasBoss;
 
     void Start()
     {
@@ -20,6 +21,11 @@ public class LevelManager3 : MonoBehaviour
         if (enemies == 6)
         {
             finalBarrier.SetActive(false);
+            canvasBoss.SetActive(true);
+        }
+        else if (enemies <= 0)
+        {
+            Loader.Load(Loader.Scene.CreditsScene);
         }
     }
 

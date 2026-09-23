@@ -23,6 +23,12 @@ public class PlayerAnimation : MonoBehaviour
     
     }
 
+    public void SpecialAttack()
+    {
+        anim.SetTrigger("SpecialAttack");
+
+    }
+
     public void Die()
     {
         anim.SetTrigger("Die");

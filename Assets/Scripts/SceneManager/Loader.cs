@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public static class Loader
 {
     public enum Scene {
+        IntroTitleScene,
         Level1,
         Level2,
         Level3,
@@ -14,7 +15,9 @@ public static class Loader
         MapScene,
         LoadingScene,
         SettingsScene, 
-        MainMenu
+        MainMenu,
+        GameOverScene,
+        CreditsScene
     }
 
     private static Action onLoaderCallback;
