@@ -8,6 +8,7 @@ public class AttackArea : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collider)
     {
+        Debug.Log("PLAYER ENTER");
         Health playerHealth=collider.GetComponent<Health>();
         if (playerHealth != null)
         {

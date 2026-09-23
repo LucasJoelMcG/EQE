@@ -10,14 +10,14 @@ public class PlayerAttackArea : MonoBehaviour
     {
         if (collider.GetComponent<EnemyHealth>() != null)
         {
-            //Debug.Log("Damage Enemigo");
+            Debug.Log("Damage Enemigo");
             EnemyHealth health = collider.GetComponent<EnemyHealth>();
             health.Damage(damage);
 
         }
         if (collider.GetComponent<Chest>() != null)
         {
-            //Debug.Log("Damage Enemigo");
+            Debug.Log("Damage Enemigo");
             Chest health = collider.GetComponent<Chest>();
             health.Damage(damage);
 
