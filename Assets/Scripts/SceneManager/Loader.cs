@@ -17,6 +17,7 @@ public static class Loader
         SettingsScene, 
         MainMenu,
         GameOverScene,
+        EndingScene,
         CreditsScene
     }
 

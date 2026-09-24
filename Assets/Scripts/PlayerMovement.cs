@@ -213,6 +213,12 @@ public class PlayerMovement : MonoBehaviour
         playerControls.Player.Attack.Disable();
     }
 
+    public void StopMovement()
+    {
+        _moveDirection = Vector2.zero;
+        _rb.velocity = Vector2.zero;
+    }
+
     public void SpeedBuff()
     {
         if (canBuff)
